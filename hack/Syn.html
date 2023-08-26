@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .nevbar img {
+        width: 200px;
+      }
+      .nevbar {
+        background-color: #a4da61d7;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        position: fixed;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .nevbar a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 1.5rem;
+      }
+      .at a:hover {
+        font-size: 1.6rem;
+        color: rgb(0, 0, 0);
+        transition: all 0.25s;
+      }
+      .at {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-left: 150px;
+      }
+
+      .container {
+        width: 100vw;
+        height: 100vh;
+        /* background-image: url("UNIVERSITY\ EVENT.jpg"); */
+        background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.9;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .about {
+        width: 100vw;
+        height: 100vh;
+        /* background-image: url("About\ us.jpg"); */
+        background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+        background-size: cover;
+        display: flex;
+        background-color: rgba(128, 128, 128, 0.675);
+      }
+      .tex {
+        width: 50%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+
+      #A {
+        margin-top: 150px;
+        font-size: 5rem;
+      }
+      #u {
+        font-size: 3rem;
+        margin-top: 178px;
+        margin-left: 12px;
+      }
+      .u {
+        font-size: 2rem;
+        margin-top: 178px;
+        margin-left: 12px;
+      }
+
+      .temp p {
+        padding: 0;
+        margin: 0;
+        font-weight: bolder;
+      }
+
+      .temp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 60px;
+      }
+      .last {
+        background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        width: 100%;
+        height: 300px;
+      }
+      .sos img {
+        border-radius: 100px;
+      }
+
+      .box {
+        height: 100%;
+        width: 24%;
+        gap: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: white;
+        padding-top: 42px;
+        border-radius: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      .bcon {
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding:  20px;
+        height: 500px;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+      }
+      .box1 {
+        margin: 0;
+        
+        background-image: url("music.jpg");
+        background-size: cover;
+      }
+
+      .box2 {
+        margin: 0;
+        background-image: url("dance.jpg");
+        background-size: cover;
+      }
+      .box3 {
+        margin: 0;
+        background-image: url("Workshops.jpg");
+        background-size: cover;
+      }
+      .box4 {
+        margin: 0;
+        background-image: url("sports.jpg");
+        background-size: cover;
+      }
+
+      .box1:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition-duration: 2s;
+        
+      }
+
+      .box2:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition-duration: 2s;
+        
+      }
+
+      .box3:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition-duration: 2s;
+        
+      }
+
+      .box4:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition-duration: 2s;
+        
+      }
+
+      .additional-options {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 10px;
+        transition: height 0.2s;
+        color: rgb(255, 255, 255);
+        
+      }
+
+      .box1:hover .additional-options {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="nevbar">
+        <img src="Screenshot 2023-08-26 012517.png" alt="" />
+        <div class="at">
+          <a href="#">Creation</a>
+          <a href="#">Registration</a>
+          <a href="#">Interaction</a>
+          <a href="#">Recording & Playbacks</a>
+        </div>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br />
+      <div class="bcon">
+        <div class="box1 box">
+         <a href="subevent.html"><button>Click Here for more</button></a>
+        </div>
+        <div class="box2 box"><a href="subevent.html"><button>Click Here for more</button></a></div>
+        <div class="box3 box"><a href="subevent.html"><button>Click Here for more</button></a></div>
+        <div class="box4 box"><a href="subevent.html"><button>Click Here for more</button></a></div>
+      </div>
+    </div>
+    <div class="about">
+      <div class="tex">
+        <span id="A">About</span>
+        <span id="u">us</span>
+      </div>
+
+      <div class="temp">
+        <p class="u">
+          Our event management platform is dedicated to bringing people together
+          through seamless and engeging event experience.
+        </p>
+        <br />
+        <p class="u">
+          Our platform is designed to make event organization and participation
+          a breeze. Whether you are planning an academic conference, a campus
+          tour,a webinar,or any other type of event, we're here to support you
+          every step of the way.
+        </p>
+      </div>
+    </div>
+
+    <div class="last">
+      <div class="sos">
+        <img src="FacebookGray.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
