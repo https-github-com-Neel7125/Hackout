@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 
     <style>
       * {
@@ -14,7 +17,10 @@
         width: 200px;
       }
       .nevbar {
-        background-color: #a4da61d7;
+        
+        z-index: 12;
+        
+        background-color: #ffffff;
         width: 100%;
         height: 80px;
         display: flex;
@@ -27,28 +33,30 @@
       .nevbar a {
         text-decoration: none;
         color: rgb(0, 0, 0);
-        font-size: 1.5rem;
+        font-size: 1rem;
+        font-family: 'Varela Round', sans-serif;
       }
-      .at a:hover{
-          
-          font-size: 1.6rem ;
-          color:rgb(0, 0, 0);
-          transition: all 0.25s  ;
-           
+      .at .button:hover {
+        background-color:#124d8c;
+       margin: 1px;
+        border: none;
+        color: rgb(255, 255, 255);
+        transition: all 0.2s;
       }
+      
       .at {
         width: 60%;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
         margin-left: 150px;
       }
 
       .container {
-        width: 100vw;
+        width: fit-content;
         height: 100vh;
-        /* background-image: url("UNIVERSITY\ EVENT.jpg"); */
-        background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+      
+        background-color: black;
         background-size: cover;
         background-repeat: no-repeat;
         opacity: 0.9;
@@ -59,11 +67,11 @@
       .about {
         width: 100vw;
         height: 100vh;
-        /* background-image: url("About\ us.jpg"); */background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+       
+        background-color: black;
         background-size: cover;
         display: flex;
-        background-color: rgba(128, 128, 128, 0.675);
-
+        
       }
       .tex {
         width: 50%;
@@ -85,82 +93,247 @@
         font-size: 2rem;
         margin-top: 178px;
         margin-left: 12px;
+        color: white;
       }
 
-      .temp p{
+      .temp p {
         padding: 0;
         margin: 0;
         font-weight: bolder;
-       
       }
 
-      .temp{
+      .temp {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         margin-bottom: 60px;
-
+        color: white;
       }
-      .last{
-        background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);    
+      .last {
+       
+        background-color: black;
         width: 100%;
         height: 300px;
-        
       }
-      .sos img{
+      .sos img {
         border-radius: 100px;
       }
 
-      .sos img:hover{
-       
+      .box {
+        height: 100%;
+        width: 24%;
+        gap: 12px;
+        padding: 0;
+     
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: white;
+        padding-top: 42px;
+        border-radius: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
       }
+      .bcon {
+        
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding:  20px;
+        height: 500px;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+      }
+      .box1 {
+        margin: 0;
+        padding: 0px;
+        background-image: url("music.jpg");
+        background-size: cover;
+        position: relative;
+      }
+
+      .box2 {
+        padding: 0;
+        margin: 0;
+        background-image: url("dance.jpg");
+        background-size: cover;
+        position: relative;
+      }
+      .box3 {
+        padding: 0;
+        margin: 0;
+        background-image: url("Workshops.jpg");
+        background-size: cover;
+        position: relative;
+      }
+      .box4 {
+        padding: 0;
+        margin: 0;
+        background-image: url("sports.jpg");
+        background-size: cover;
+        position: relative;
+      }
+
+      .box1:hover {
+        transform: scale(1.05);
+        
+       
+        transition: linear;
+        transition-duration: 0.5s;
+       
+        
+      }
+
+      .box2:hover {
+        transform: scale(1.05);
+        transition: linear;
+        transition-duration: 0.5s;
+        
+      }
+
+      .box3:hover {
+        transform: scale(1.05);
+        transition: linear;
+        transition-duration: 0.5s;
+        
+      }
+
+      .box4:hover {
+        transform: scale(1.05);
+        transition: linear;
+        transition-duration: 0.5s;
+        
+      }
+
+     
+      .over{
+        padding: 0;
+       
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+        opacity: 0;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+
+      }
+     
+      .over:hover{
+        opacity: 1;
+        backdrop-filter: blur(3px);
+        
+        transition:all 0.8s ease-out;
+      }
+
+      
+      
+       .click{
+        
+        color: white;
+        background-color: black;
+        border-radius: 10px;
+        padding: 10px 20px;
+        cursor: pointer;
+        border: 0;
+      } 
+
+      .click a{
+        color: white;
+        text-decoration: none;
+      }
+.box span{
+  position: absolute;
+  bottom: 20px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  color: azure;
+  font-size: 2rem;
+
+}
+
+.at .button{
+
+  background-color: white;
+ 
+  color: rgb(88, 88, 88);
+  border-radius: 20px;
+  padding: 7px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.at .button2:hover{
+  background-color: #124d87;
+  transition: all ;
+}
+.at .button2{
+
+
+  padding: 7px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 20px;
+    background-color:#052a51;
+    color: white;
+    margin-left: 60px;
+}
+   
     </style>
   </head>
 
   <body>
     <div class="container">
       <div class="nevbar">
-        <img src="Screenshot 2023-08-26 012517.png" alt="" />
-        <div class="at">
-          <a href="#">Creation</a>
-          <a href="#">Registration</a>
-          <a href="#">Interaction</a>
-          <a href="#">Recording & Playbacks</a>
+        <a href="https://edusakha.com/"> <img src="Screenshot 2023-08-26 012517.png" alt="" /></a>
+       
+        <div class="at"> 
+          <a href="#" class="button">Platform</a>
+          <a href="#" class="button">Solution</a>
+          <a href="https://edusakha.com/for-student" class="button">For Student</a>
+          <a href="https://edusakha.com/pricing" class="button">Pricing</a>
+           <a href="https://edusakha.com/" class="button">Resources</a>
+           <a href="https://edusakha.com/book-demo" class="button2">Book A Demo</a>
+          
+          
+          
+         
+          
         </div>
       </div>
-    </div>
-    <div class="about">
-      <div class="tex">
-        <span id="A">About</span>
-        <span id="u">us</span>
-      </div>
-
-      <div class="temp">
-        <p class="u">
-          Our event management platform is dedicated to bringing people together
-          through seamless and engeging event experience.
-        </p>
-        <br />
-        <p class="u">
-          Our platform is designed to make event organization and participation
-          a breeze. Whether you are planning an academic conference, a campus
-          tour,a webinar,or any other type of event, we're here to support you
-          every step of the way.
-        </p>
-      </div>
-
-
-    </div>
-
-    <div class="last">
-
-        <div class="sos">
-
-            <img src="FacebookGray.png" alt="">
+      <br /><br /><br /><br /><br /><br /><br />
+      <div class="bcon">
+        <div class="box1 box">
+         <span>MUSIC</span>
+          <div class="over">
+          <button class="click"><a href="subevent.html">Click here for more</a></button>
         </div>
+        </div>
+        <div class="box2 box">
+          <span>DANCE</span>
+          <div class="over">
+            <button class="click"><a href="subevent.html">Click here for more</a></button>
+          </div>
+        </div>
+        <div class="box3 box">
+          <span>SEMINARS</span>
+          
+          <div class="over"><button class="click"><a href="subevent.html">Click here for more</a></button></div>
+        </div>
+        <div class="box4 box">
+          <span>SPORTS</span>
+          <div class="over"><button class="click"><a href="subevent.html">Click here for more</a></button></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    
 
-
+    
     </div>
   </body>
 </html>
